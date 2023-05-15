@@ -69,9 +69,13 @@ By default, NGINX redefines two header fields in proxied requests, "Host" and "C
 
 # NGINX reverse proxy
 
+To make an NGINX reverse proxy...
+
 Make sure you're in the VM in home then:
 
 `sudo nano /etc/nginx/sites-available/default`
+
+----
 
 In the file, go to the location section and replace what is there with:
 
@@ -88,7 +92,9 @@ and change the localhost to what you need.  In this case:
 
 `3000`
 
-And under that copy and paste:
+----
+
+Under that copy and paste:
 
     `location /app2 {
         proxy_pass http://localhost:8081;
@@ -101,7 +107,9 @@ And under that copy and paste:
 
 changing the localhost again to `3000`
 
-check your syntax errors by entering:
+----
+
+Check your syntax errors by entering:
 
 `sudo nginx -t`
 
@@ -109,14 +117,20 @@ then restart nginx:
 
 `sudo systemctl restart nginx`
 
-go into the `app` directory, then:
+----
+
+Go into the `app` directory (twice if needed), then:
 
 `npm start`
 
-if you go to the web browser and type in:
+----
+
+If you go to the web browser and type in:
 
 `192.168.10.100`
 
 You should see:
 
 ![alt](spartaapp.png)
+
+Success!
