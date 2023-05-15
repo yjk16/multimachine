@@ -1,18 +1,47 @@
+
+
 #!/bin/bash
 
+
+
+
+# Update and Upgrade the VM
+
 sudo apt-get update -y
+
 sudo apt-get upgrade -y
+
+
+
+
+# Install Nginx
+
 sudo apt-get install nginx -y
-sudo systemctl start nginx -y
 
-sudo systemctl enable nginx
-sudo apt-get install python -y
 
-# install nodejs
+
+
+# Install Python Properties
+
 sudo apt-get install python-software-properties -y
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install nodejs -y
 
-# install pm2
+
+
+
+# Install NodeJS
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+sudo apt-get install -y nodejs
+
+
+
+
+# Install pm2 globally
+
 sudo npm install pm2 -g
+
+
+
+
 

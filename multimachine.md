@@ -94,6 +94,8 @@ And finally:
 
 to check the status.
 
+
+press `q` to get out of that.
 ----
 
 In the db Bash terminal enter:
@@ -159,7 +161,7 @@ In the Home directory, enter:
 `sudo nano .bashrc`
 
 at the end of this file add:
-`export DB_HOST=mongodb|://192.168.10.150:27017/posts`
+`export DB_HOST=mongodb://192.168.10.150:27017/posts`
 This creates the environment variable called `DB_HOST` and sets it to the contents of mongodb followed by the ip address, the port, and page.
 
 Save this. Then:
@@ -183,6 +185,10 @@ then:
 `npm install`
 
 (This may take a while, so be patient!)
+
+If this doesn't work, try:
+
+`sudo npm start`
 
 ----
 
