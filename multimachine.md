@@ -111,6 +111,8 @@ Should look like:
 
 ![alt](network.png)
 
+(Except make sure it does say `0.0.0.0`!)
+
 Then control + X to exit
 
 save changes by entering `y`
